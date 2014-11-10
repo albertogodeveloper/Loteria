@@ -10,4 +10,6 @@
 
     <string name="guardar">Guardar Combinacion</string>
 
+    <string name="borrar">Borrar ult. reg</string>
+
 </resources>

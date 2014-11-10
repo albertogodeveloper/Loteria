@@ -45,7 +45,7 @@
         android:id="@+id/btnGenerar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="46dp"
         android:onClick="onButtonClickGenerar"
         android:text="@string/generar" />
 
@@ -53,8 +53,16 @@
         android:id="@+id/btnGuardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="16dp"
         android:onClick="onButtonClickGuardar"
         android:text="@string/guardar" />
+
+    <Button
+        android:id="@+id/btnBorrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="onButtonClickBorrar"
+        android:text="@string/borrar" />
 
 </LinearLayout>

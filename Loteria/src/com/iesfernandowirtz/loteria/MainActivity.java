@@ -62,6 +62,15 @@ public class MainActivity extends Activity {
 		editor.commit();
 	}
 
+	private void borrarDatos() {
+		SharedPreferences preferencias = getSharedPreferences("datos",
+				Context.MODE_PRIVATE);
+		Editor editor = preferencias.edit();
+		editor.putString("resultado", "");
+		editor.putString("reintegro", "");
+		editor.commit();
+	}
+
 	public void onButtonClickGuardar(View v) {
 		if (resultado == null || reintegro == null) {
 			alertaSimple("Error al guardar",
@@ -72,6 +81,27 @@ public class MainActivity extends Activity {
 			alertaSimple("Guardado correcto",
 					"El número se ha guardado correctamente");
 		}
+	}
+
+	public void onButtonClickBorrar(View v) {
+		AlertDialog.Builder dialogo1 = new AlertDialog.Builder(this);
+		dialogo1.setTitle("Borrar");
+		dialogo1.setMessage("Seguro que quiere borrar el último registro?");
+		dialogo1.setCancelable(false);
+		dialogo1.setPositiveButton("Confirmar",
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogo1, int id) {
+						borrarDatos();
+						textViewResultado.setText("");
+						textViewReintegro.setText("");
+					}
+				});
+		dialogo1.setNegativeButton("Cancelar",
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogo1, int id) {
+					}
+				});
+		dialogo1.show();
 	}
 
 	private void alertaSimple(String titulo, String mensaje) {
