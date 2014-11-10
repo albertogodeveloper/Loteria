@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Loteria</string>
+
+    <string name="premiados">Números Premiados</string>
+
+    <string name="reintegro">Reintegro</string>
+
+    <string name="generar">Generar Números</string>
+
+</resources>
